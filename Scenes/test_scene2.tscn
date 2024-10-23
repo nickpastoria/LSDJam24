@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq6sd53436qbx"]
+[gd_scene load_steps=4 format=3 uid="uid://c7oyjw8odteoy"]
 
-[ext_resource type="Environment" uid="uid://dqv04aayfsij" path="res://Environments/test_scen_environment.tres" id="1_k1dfa"]
-[ext_resource type="PackedScene" uid="uid://bauw0h42glqh2" path="res://Prefabs/player.tscn" id="1_tf0yn"]
+[ext_resource type="PackedScene" uid="uid://bauw0h42glqh2" path="res://Prefabs/player.tscn" id="1_lll7h"]
+[ext_resource type="Environment" uid="uid://dsalj0vbyawe" path="res://Environments/test_scen_e2nvironment.tres" id="1_w7m2f"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ir2ce"]
 
@@ -20,14 +20,14 @@ directional_shadow_fade_start = 0.04
 directional_shadow_max_distance = 4.6
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_k1dfa")
+environment = ExtResource("1_w7m2f")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(451.761, 0, 0, 0, 1, 0, 0, 0, 451.761, 0, 0, 0)
 use_collision = true
 mesh = SubResource("PlaneMesh_ir2ce")
 
-[node name="PLayer" parent="." instance=ExtResource("1_tf0yn")]
+[node name="PLayer" parent="." instance=ExtResource("1_lll7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51939, 1.51241, -0.622517)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
