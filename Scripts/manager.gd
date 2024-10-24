@@ -1,10 +1,12 @@
-extends Node3D
+extends Node
 var SCENES_FOLDER = "res://Scenes/"
+var INTRO = preload("res://Main/Intro.tscn").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Parse Scenes folder
 	var files = dir_contents(SCENES_FOLDER)
-	pick_random_level(files)
+	get_tree().root.add_child.call_deferred(INTRO)
 	
 func pick_random_level(files):
 	var num_scenes = files.size()

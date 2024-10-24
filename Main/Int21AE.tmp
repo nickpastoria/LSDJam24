@@ -35,7 +35,6 @@ ratio = 1.7778
 texture_filter = 1
 texture_repeat = 1
 layout_mode = 2
-mouse_force_pass_scroll_events = false
 stream = ExtResource("1_68br8")
 autoplay = true
 expand = true

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://brr16ob23ou2n"]
+
+[ext_resource type="Script" path="res://Scripts/manager.gd" id="1_bpsod"]
+
+[node name="Manager" type="Node"]
+script = ExtResource("1_bpsod")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
