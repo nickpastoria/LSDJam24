@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs2s0mqa7gjvc"]
+
+[ext_resource type="VideoStream" path="res://Video/HPS1_Intro_1080p_NoDither_1.ogv" id="1_68br8"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("1_68br8")
+autoplay = true
+expand = true
