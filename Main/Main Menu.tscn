@@ -1,8 +1,104 @@
-[gd_scene format=3 uid="uid://bmuhnpbcmhbi7"]
+[gd_scene load_steps=9 format=3 uid="uid://bmuhnpbcmhbi7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_odw16"]
+sky_top_color = Color(0.260256, 0.0676824, 0, 1)
+sky_horizon_color = Color(0.662604, 0.558368, 0.515724, 1)
+sky_energy_multiplier = 0.6
+ground_bottom_color = Color(0.390159, 0.165789, 0.0628955, 1)
+ground_horizon_color = Color(0.662604, 0.558368, 0.515724, 1)
+
+[sub_resource type="Sky" id="Sky_s4xqp"]
+sky_material = SubResource("ProceduralSkyMaterial_odw16")
+
+[sub_resource type="Environment" id="Environment_j4jn0"]
+background_mode = 2
+sky = SubResource("Sky_s4xqp")
+
+[sub_resource type="Animation" id="Animation_7tk5g"]
+resource_name = "MenuCamera"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15, 30),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -3.14159, 0), Vector3(0, -6.28319, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.08386, 0), Vector3(0, 2, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_777mt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.08386, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p6d36"]
+_data = {
+"MenuCamera": SubResource("Animation_7tk5g"),
+"RESET": SubResource("Animation_777mt")
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jqkf6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c88i7"]
 
 [node name="MainMenu" type="Node3D"]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.203368, 0.456773, 0, 0.913545, 0.406737, -0.5, 0.352244, -0.791154, 0, 0, 0)
+light_color = Color(0.360716, 9.1665e-05, 0.362477, 1)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j4jn0")
+
 [node name="MenuCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08386, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuCamera"]
+libraries = {
+"": SubResource("AnimationLibrary_p6d36")
+}
+autoplay = "MenuCamera"
 
 [node name="Main Menu" type="Control" parent="."]
 layout_mode = 3
@@ -13,3 +109,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="World" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
+transform = Transform3D(11.6363, 0, 0, 0, 1, 0, 0, 0, 11.6363, 0, 0, 0)
+mesh = SubResource("PlaneMesh_jqkf6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="World"]
+transform = Transform3D(21.7166, 0, 0, 0, 13.4835, 0, 0, 0, 1, 0, 0, -12.3243)
+mesh = SubResource("BoxMesh_c88i7")
