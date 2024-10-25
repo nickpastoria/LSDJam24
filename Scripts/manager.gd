@@ -2,6 +2,7 @@ extends Node
 var SCENES_FOLDER = "res://Scenes/"
 var INTRO = preload("res://Main/Intro.tscn").instantiate()
 var MENU = preload("res://Main/Main Menu.tscn").instantiate()
+var FADE = preload("res://Prefabs/fade_transition.tscn").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
