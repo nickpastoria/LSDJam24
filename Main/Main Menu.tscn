@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmuhnpbcmhbi7"]
+[gd_scene load_steps=14 format=3 uid="uid://bmuhnpbcmhbi7"]
 
 [ext_resource type="FontFile" uid="uid://hnfc4tik53kj" path="res://Fonts/SilentHill1Expan.ttf" id="1_qswwn"]
 [ext_resource type="AnimationLibrary" uid="uid://slyd2fetthu7" path="res://Animation/UI_Animations.res" id="2_8ly2i"]
 [ext_resource type="Theme" uid="uid://dghbl6o1j01ln" path="res://Font Theme/RE_Font_Theme.tres" id="3_nd03c"]
 [ext_resource type="Texture2D" uid="uid://1c2nedsiqi87" path="res://Textures/TitleColor.png" id="4_pm48e"]
+[ext_resource type="AudioStream" uid="uid://b3v0csv0jyy3r" path="res://Music/HandHook.mp3" id="5_yrrch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_odw16"]
 sky_top_color = Color(0.260256, 0.0676824, 0, 1)
@@ -128,7 +129,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("1_qswwn")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 13
 text = "INSERT MORE COIN(S)
 2 CREDITS TO START"
 horizontal_alignment = 1
@@ -146,10 +147,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = 72.0
-offset_right = 26.0
-offset_bottom = 95.0
+offset_left = -38.0
+offset_top = 77.0
+offset_right = 40.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_nd03c")
@@ -158,6 +159,8 @@ text = "CREDIT(S) 0"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Main Menu"]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -184,3 +187,8 @@ mesh = SubResource("PlaneMesh_jqkf6")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="World"]
 transform = Transform3D(21.7166, 0, 0, 0, 13.4835, 0, 0, 0, 1, 0, 0, -12.3243)
 mesh = SubResource("BoxMesh_c88i7")
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_yrrch")
+volume_db = -20.8
+autoplay = true
