@@ -1,4 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmuhnpbcmhbi7"]
+[gd_scene load_steps=13 format=3 uid="uid://bmuhnpbcmhbi7"]
+
+[ext_resource type="FontFile" uid="uid://hnfc4tik53kj" path="res://Fonts/SilentHill1Expan.ttf" id="1_qswwn"]
+[ext_resource type="AnimationLibrary" uid="uid://slyd2fetthu7" path="res://Animation/UI_Animations.res" id="2_8ly2i"]
+[ext_resource type="Theme" uid="uid://dghbl6o1j01ln" path="res://Font Theme/RE_Font_Theme.tres" id="3_nd03c"]
+[ext_resource type="Texture2D" uid="uid://1c2nedsiqi87" path="res://Textures/TitleColor.png" id="4_pm48e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_odw16"]
 sky_top_color = Color(0.260256, 0.0676824, 0, 1)
@@ -107,6 +112,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Insert_More_Credits" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = 40.0
+offset_right = 85.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_qswwn")
+theme_override_font_sizes/font_size = 10
+text = "INSERT MORE COIN(S)
+2 CREDITS TO START"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main Menu/Insert_More_Credits"]
+libraries = {
+"UI_Animations": ExtResource("2_8ly2i")
+}
+autoplay = "UI_Animations/blinking"
+
+[node name="Creds_Left" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 72.0
+offset_right = 26.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_nd03c")
+theme_override_constants/outline_size = 3
+text = "CREDIT(S) 0"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -148.0
+offset_right = 182.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998031, 1)
+texture = ExtResource("4_pm48e")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="World" type="Node3D" parent="."]
 
