@@ -1,14 +1,16 @@
 extends Label
 
 var credits = 0
-var can_add_coin = true
+var can_add_coin = false
 signal start_game
 
 func _ready():
+	input_cooldown()
 	update_text()
 
 func add_credit():
 	credits += 1
+	$AudioStreamPlayer.play()
 	update_text()
 	if credits >= 2:
 		start_game.emit()
