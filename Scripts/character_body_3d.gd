@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 const SPEED = 5
 const ACCEL = 0.75
 const FRICTION = 0.5
@@ -9,6 +10,7 @@ const AIR_CONTROL = 0.2
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var input_dir = Vector2.ZERO
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -34,23 +36,24 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("StrafeLeft", "StrafeRight", "MoveForward", "MoveBackward")
+	input_dir = Input.get_vector("StrafeLeft", "StrafeRight", "MoveForward", "MoveBackward")
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x += direction.x * final_accel
 		velocity.z += direction.z * final_accel
 		velocity = velocity.limit_length(SPEED)
-	
-	# If the player velocity is zero then set the velocity to zero
-	if velocity.length() < 0.1:
-		velocity *= Vector3.ZERO
 		
 	# Apply ground friction to player
 	if !velocity.is_zero_approx() && is_on_floor():
 		# Apply friction vector in opposite dirction of player movement vector
-		var friction = Vector3(velocity).normalized() * FRICTION
+		var friction = Vector3(velocity.x, 0, velocity.z).normalized() * FRICTION
+		# Apply stronger friction if player is not inputting a direction
+		if input_dir.is_zero_approx():
+			friction *= velocity.length()
 		velocity -= friction
 		
+	# If the player velocity is zero then set the velocity to zero
+	if velocity.length() < 0.1:
+		velocity *= Vector3.ZERO
 		
-			
 	move_and_slide()
