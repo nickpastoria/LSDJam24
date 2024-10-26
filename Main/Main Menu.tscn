@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmuhnpbcmhbi7"]
+[gd_scene load_steps=15 format=3 uid="uid://bmuhnpbcmhbi7"]
 
 [ext_resource type="FontFile" uid="uid://hnfc4tik53kj" path="res://Fonts/SilentHill1Expan.ttf" id="1_qswwn"]
 [ext_resource type="AnimationLibrary" uid="uid://slyd2fetthu7" path="res://Animation/UI_Animations.res" id="2_8ly2i"]
 [ext_resource type="Theme" uid="uid://dghbl6o1j01ln" path="res://Font Theme/RE_Font_Theme.tres" id="3_nd03c"]
+[ext_resource type="Script" path="res://Main/creds_left.gd" id="4_0ln23"]
 [ext_resource type="Texture2D" uid="uid://1c2nedsiqi87" path="res://Textures/TitleColor.png" id="4_pm48e"]
 [ext_resource type="AudioStream" uid="uid://b3v0csv0jyy3r" path="res://Music/HandHook.mp3" id="5_yrrch"]
 
@@ -157,6 +158,11 @@ theme = ExtResource("3_nd03c")
 theme_override_constants/outline_size = 3
 text = "CREDIT(S) 0"
 horizontal_alignment = 1
+script = ExtResource("4_0ln23")
+
+[node name="Timer" type="Timer" parent="Main Menu/Creds_Left"]
+wait_time = 0.5
+one_shot = true
 
 [node name="TextureRect" type="TextureRect" parent="Main Menu"]
 texture_filter = 1
@@ -192,3 +198,5 @@ mesh = SubResource("BoxMesh_c88i7")
 stream = ExtResource("5_yrrch")
 volume_db = -20.8
 autoplay = true
+
+[connection signal="timeout" from="Main Menu/Creds_Left/Timer" to="Main Menu/Creds_Left" method="_on_timer_timeout"]

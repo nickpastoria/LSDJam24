@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://csb8y00752q27"]
 
-[ext_resource type="Script" path="res://transitionTrigger.gd" id="1_1wbna"]
+[ext_resource type="Script" path="res://Scripts/transitionTrigger.gd" id="1_1wbna"]
 
 [sub_resource type="Animation" id="Animation_rqw6o"]
 length = 0.001

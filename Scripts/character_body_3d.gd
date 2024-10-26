@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5
 const ACCEL = 0.75
 const FRICTION = 0.5

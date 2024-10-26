@@ -14,6 +14,8 @@ func _ready() -> void:
 	INTRO.call_deferred("free")
 	print("Playback finished")
 	add_child(MENU)
+	await $"MainMenu/Main Menu/Creds_Left".start_game
+	pick_random_level(files)
 	
 func pick_random_level(files):
 	var num_scenes = files.size()
