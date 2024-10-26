@@ -9,6 +9,8 @@ func _ready():
 	update_text()
 
 func add_credit():
+	if credits > 0:
+		$AudioStreamPlayer.pitch_scale += 0.1
 	credits += 1
 	$AudioStreamPlayer.play()
 	update_text()
