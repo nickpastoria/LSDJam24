@@ -15,7 +15,10 @@ func _ready() -> void:
 	print("Playback finished")
 	add_child(MENU)
 	await $"MainMenu/Main Menu/Creds_Left".start_game
+	add_child(FADE)
+	await $"FadeTransition/ColorRect/AnimationPlayer".transition
 	pick_random_level(files)
+	remove_child(MENU)
 	
 func pick_random_level(files):
 	var num_scenes = files.size()
