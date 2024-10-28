@@ -1,0 +1,40 @@
+// Game: Godot
+// Format: Standard
+// entity 0
+{
+"_tb_textures" "textures"
+"classname" "worldspawn"
+"_tb_mod" "Textures"
+// brush 0
+{
+( -928 -64 -16 ) ( -928 -63 -16 ) ( -928 -64 -15 ) texture_floor_wood_px 0 0 0 0.6 0.5
+( -64 -624 -16 ) ( -64 -624 -15 ) ( -63 -624 -16 ) texture_floor_wood_px 0 0 0 0.6 0.5
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) texture_floor_wood_px 0 0 0 0.6 0.5
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) texture_floor_wood_px 0 0 0 0.6 0.5
+( 64 640 16 ) ( 65 640 16 ) ( 64 640 17 ) texture_floor_wood_px 0 0 0 0.6 0.5
+( 560 64 16 ) ( 560 64 17 ) ( 560 65 16 ) texture_floor_wood_px 0 0 0 0.6 0.5
+}
+// brush 1
+{
+( 512 -608 560 ) ( 560 -640 -16 ) ( 480 544 560 ) texture_floor 0 0 0 1 1
+( 560 -640 -16 ) ( 560 640 -16 ) ( 480 544 560 ) texture_floor 0 0 0 1 1
+( 560 640 -16 ) ( 656 640 560 ) ( 480 544 560 ) texture_floor 0 0 0 1 1
+( 512 -608 560 ) ( 656 -608 560 ) ( 560 -640 -16 ) texture_floor 0 0 0 1 1
+( 656 -608 -16 ) ( 656 640 -16 ) ( 560 640 -16 ) texture_floor 0 0 0 1 1
+( 480 544 560 ) ( 656 640 560 ) ( 656 -608 560 ) texture_floor 0 0 0 1 1
+( 656 640 -16 ) ( 656 640 560 ) ( 560 640 -16 ) texture_floor 0 0 0 1 1
+( 560 -640 -16 ) ( 656 -608 560 ) ( 656 -608 -16 ) texture_floor 0 0 0 1 1
+( 656 -608 560 ) ( 656 640 560 ) ( 656 640 -16 ) texture_floor 0 0 0 1 1
+}
+// brush 2
+{
+( -928 608 560 ) ( -928 640 -16 ) ( -928 688 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( -928 608 560 ) ( 480 528 560 ) ( -928 640 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 480 528 560 ) ( 560 640 -16 ) ( -928 640 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 640 -16 ) ( 560 688 -16 ) ( -928 688 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( -928 688 560 ) ( 560 688 560 ) ( 480 528 560 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 688 -16 ) ( 560 688 560 ) ( -928 688 560 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 480 528 560 ) ( 560 688 560 ) ( 560 640 -16 ) texture_wall_bricks_brown_px 0.036743164 0 0 1 1
+( 560 640 -16 ) ( 560 688 560 ) ( 560 688 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+}
+}

@@ -87,11 +87,11 @@ textures/canvas_textures/default_texture_filter=3
 
 resolution={
 "type": "ivec2",
-"value": Vector2i(600, 480)
+"value": Vector2i(640, 480)
 }
 snap={
 "type": "float",
-"value": 0.5
+"value": 0.75
 }
 fog_color={
 "type": "color",
@@ -103,7 +103,7 @@ fog_range={
 }
 fog_black={
 "type": "bool",
-"value": false
+"value": true
 }
 cull_dist={
 "type": "float",

@@ -1,0 +1,35 @@
+// Game: Godot
+// Format: Standard
+// entity 0
+{
+"_tb_textures" "textures"
+"classname" "worldspawn"
+"_tb_mod" "Textures"
+// brush 0
+{
+( 80 -64 -16 ) ( 80 -63 -16 ) ( 80 -64 -15 ) texture_floor_wood_px 0 0 0 1 1
+( -64 544 -16 ) ( -64 544 -15 ) ( -63 544 -16 ) texture_floor_wood_px 0 0 0 1 1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) texture_floor_wood_px 0 0 0 1 1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) texture_floor_wood_px 0 0 0 1 1
+( 64 640 16 ) ( 65 640 16 ) ( 64 640 17 ) texture_floor_wood_px 0 0 0 1 1
+( 560 64 16 ) ( 560 64 17 ) ( 560 65 16 ) texture_floor_wood_px 0 0 0 1 1
+}
+// brush 1
+{
+( 560 -608 16 ) ( 560 640 -16 ) ( 560 640 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 656 -608 16 ) ( 560 -608 -16 ) ( 560 -608 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 656 640 -16 ) ( 560 -608 -16 ) ( 656 -608 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 656 640 560 ) ( 560 -608 560 ) ( 560 640 560 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 656 640 16 ) ( 560 640 -16 ) ( 656 640 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 656 640 16 ) ( 656 -608 -16 ) ( 656 -608 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+}
+// brush 2
+{
+( -928 640 16 ) ( -928 688 -16 ) ( -928 688 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 640 16 ) ( -928 640 -16 ) ( -928 640 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 688 -16 ) ( -928 640 -16 ) ( 560 640 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 688 560 ) ( -928 640 560 ) ( -928 688 560 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 688 16 ) ( -928 688 -16 ) ( 560 688 -16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+( 560 688 16 ) ( 560 640 -16 ) ( 560 640 16 ) texture_wall_bricks_brown_px 0 0 0 1 1
+}
+}
