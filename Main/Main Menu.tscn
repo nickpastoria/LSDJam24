@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bmuhnpbcmhbi7"]
+[gd_scene load_steps=18 format=3 uid="uid://bmuhnpbcmhbi7"]
 
+[ext_resource type="Texture2D" uid="uid://dpy8rd3cmhgao" path="res://Shaders/Bayer matrix.png" id="1_4vqp7"]
 [ext_resource type="FontFile" uid="uid://hnfc4tik53kj" path="res://Fonts/SilentHill1Expan.ttf" id="1_qswwn"]
 [ext_resource type="AnimationLibrary" uid="uid://slyd2fetthu7" path="res://Animation/UI_Animations.res" id="2_8ly2i"]
+[ext_resource type="Script" path="res://Shaders/Compositor/PSX Screen.gd" id="2_63ow7"]
 [ext_resource type="Theme" uid="uid://dghbl6o1j01ln" path="res://Font Theme/RE_Font_Theme.tres" id="3_nd03c"]
 [ext_resource type="Script" path="res://Main/creds_left.gd" id="4_0ln23"]
 [ext_resource type="Texture2D" uid="uid://1c2nedsiqi87" path="res://Textures/TitleColor.png" id="4_pm48e"]
@@ -21,6 +23,22 @@ sky_material = SubResource("ProceduralSkyMaterial_odw16")
 [sub_resource type="Environment" id="Environment_j4jn0"]
 background_mode = 2
 sky = SubResource("Sky_s4xqp")
+
+[sub_resource type="CompositorEffect" id="CompositorEffect_jeag1"]
+resource_local_to_scene = false
+resource_name = ""
+enabled = true
+effect_callback_type = 4
+needs_motion_vectors = false
+needs_normal_roughness = false
+script = ExtResource("2_63ow7")
+dither = ExtResource("1_4vqp7")
+resoulution = Vector2i(600, 480)
+color_depth = 5
+dither_strength = 8
+
+[sub_resource type="Compositor" id="Compositor_tddk7"]
+compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_jeag1")])
 
 [sub_resource type="Animation" id="Animation_7tk5g"]
 resource_name = "MenuCamera"
@@ -84,10 +102,6 @@ _data = {
 "RESET": SubResource("Animation_777mt")
 }
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_jqkf6"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_c88i7"]
-
 [node name="MainMenu" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -101,6 +115,7 @@ environment = SubResource("Environment_j4jn0")
 
 [node name="MenuCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08386, 0)
+compositor = SubResource("Compositor_tddk7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MenuCamera"]
 libraries = {
@@ -117,6 +132,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Insert_More_Credits" type="Label" parent="Main Menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -189,14 +205,6 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="World" type="Node3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
-transform = Transform3D(11.6363, 0, 0, 0, 1, 0, 0, 0, 11.6363, 0, 0, 0)
-mesh = SubResource("PlaneMesh_jqkf6")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="World"]
-transform = Transform3D(21.7166, 0, 0, 0, 13.4835, 0, 0, 0, 1, 0, 0, -12.3243)
-mesh = SubResource("BoxMesh_c88i7")
 
 [node name="Music" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_yrrch")

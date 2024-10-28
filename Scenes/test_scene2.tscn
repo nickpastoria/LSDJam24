@@ -38,13 +38,4 @@ use_collision = true
 transform = Transform3D(0.36486, 0, 0, 0, 1, 0, 0, 0, 0.36486, 0.187096, 3.13927, -8.98691)
 height = 69.464
 
-[node name="SpotLight3D" type="SpotLight3D" parent="CSGCylinder3D"]
-transform = Transform3D(2.74077, 0, 0, 0, -4.37114e-08, 1, 0, -2.74077, -1.19803e-07, 0, 5.49572, 9.52584)
-light_color = Color(0.979093, 0.872709, 0.797748, 1)
-light_energy = 4.922
-light_size = 1.0
-light_specular = 2.116
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 18.502
-spot_angle = 49.0727
+[node name="TBLoader" type="TBLoader" parent="."]
