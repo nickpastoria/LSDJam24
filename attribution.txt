@@ -1,6 +1,9 @@
 # LSD Game Jam 2024
 # Attribution File
 
+## Shaders:
+	 1. PS1 Shader Pack: https://github.com/Rytelier/Godot-PSX-Visuals/
+
 ## Multimedia
 	1. HPS1 Intro Video by Vladimere Lhore
 

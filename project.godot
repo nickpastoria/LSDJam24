@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=480
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
 window/stretch/mode="viewport"
-window/stretch/scale=1.5
 
 [editor]
 
@@ -71,6 +71,38 @@ Escape={
 ]
 }
 
+[psx]
+
+compositor_effect_path=""
+canvas_material_path=""
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=3
+
+[shader_globals]
+
+resolution={
+"type": "ivec2",
+"value": Vector2i(600, 480)
+}
+snap={
+"type": "float",
+"value": 0.5
+}
+fog_color={
+"type": "color",
+"value": Color(0.489622, 0.489622, 0.489622, 1)
+}
+fog_range={
+"type": "vec2",
+"value": Vector2(15, 15)
+}
+fog_black={
+"type": "bool",
+"value": false
+}
+cull_dist={
+"type": "float",
+"value": 50.0
+}

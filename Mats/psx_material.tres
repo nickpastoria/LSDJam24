@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cfe77r7iumomv"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_hqjj5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_hqjj5")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
