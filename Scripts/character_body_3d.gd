@@ -11,9 +11,12 @@ const AIR_CONTROL = 0.2
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var input_dir = Vector2.ZERO
+@onready var camera_anims_tree: AnimationTree = $Head/Camera3D/Camera_Anims_Tree
+var state_machine
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	state_machine = camera_anims_tree["parameters/playback"]
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -47,6 +50,7 @@ func _physics_process(delta: float) -> void:
 	if !velocity.is_zero_approx() && is_on_floor():
 		# Apply friction vector in opposite dirction of player movement vector
 		var friction = Vector3(velocity.x, 0, velocity.z).normalized() * FRICTION
+		state_machine.travel("Walk")
 		# Apply stronger friction if player is not inputting a direction
 		if input_dir.is_zero_approx():
 			friction *= velocity.length()
@@ -54,6 +58,7 @@ func _physics_process(delta: float) -> void:
 		
 	# If the player velocity is zero then set the velocity to zero
 	if velocity.length() < 0.1:
+		state_machine.travel("Idle")
 		velocity *= Vector3.ZERO
 		
 	move_and_slide()

@@ -1,0 +1,111 @@
+[gd_scene load_steps=16 format=3 uid="uid://bauw0h42glqh2"]
+
+[ext_resource type="Script" path="res://Scripts/character_body_3d.gd" id="1_j7b0d"]
+[ext_resource type="AnimationLibrary" uid="uid://c1fe14pkvoopv" path="res://Animation/PlayerAnims.res" id="2_7gq8h"]
+[ext_resource type="Script" path="res://Scripts/player_anim_states.gd" id="2_k2s6t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6pef5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dt8w8"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_anobd"]
+animation = &"PlayerAnims/Head_Bob"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rsq31"]
+animation = &"PlayerAnims/Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u0a7j"]
+switch_mode = 1
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s5uqp"]
+switch_mode = 1
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lkpb6"]
+switch_mode = 1
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ux4np"]
+states/PlayerAnims_Head_Bob/node = SubResource("AnimationNodeAnimation_anobd")
+states/PlayerAnims_Head_Bob/position = Vector2(464, 201)
+states/PlayerAnims_Idle/node = SubResource("AnimationNodeAnimation_rsq31")
+states/PlayerAnims_Idle/position = Vector2(476, 133)
+states/Start/position = Vector2(226, 133)
+transitions = ["Start", "PlayerAnims_Idle", SubResource("AnimationNodeStateMachineTransition_u0a7j"), "PlayerAnims_Idle", "PlayerAnims_Head_Bob", SubResource("AnimationNodeStateMachineTransition_s5uqp"), "PlayerAnims_Head_Bob", "PlayerAnims_Idle", SubResource("AnimationNodeStateMachineTransition_lkpb6")]
+
+[sub_resource type="Animation" id="Animation_uxqx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fa5bm"]
+_data = {
+"RESET": SubResource("Animation_uxqx5")
+}
+
+[sub_resource type="Animation" id="Animation_lsfaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3pcf"]
+_data = {
+"RESET": SubResource("Animation_lsfaa")
+}
+
+[node name="PLayer" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_j7b0d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_6pef5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("ConvexPolygonShape3D_dt8w8")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="Camera_Anims_Tree" type="AnimationTree" parent="Head/Camera3D"]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeStateMachine_ux4np")
+anim_player = NodePath("Head_Bob")
+script = ExtResource("2_k2s6t")
+position = Vector3(0, 0, 0)
+
+[node name="Head_Bob" type="AnimationPlayer" parent="Head/Camera3D/Camera_Anims_Tree"]
+libraries = {
+"": SubResource("AnimationLibrary_fa5bm"),
+"PlayerAnims": ExtResource("2_7gq8h")
+}
+
+[node name="Idle" type="AnimationPlayer" parent="Head/Camera3D/Camera_Anims_Tree"]
+libraries = {
+"": SubResource("AnimationLibrary_b3pcf"),
+"PlayerAnims": ExtResource("2_7gq8h")
+}

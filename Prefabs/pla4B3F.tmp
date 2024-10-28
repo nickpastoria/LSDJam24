@@ -18,10 +18,11 @@ animation = &"PlayerAnims/Walk"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e644d"]
-xfade_time = 0.2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nxtc7"]
 xfade_time = 0.2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_owpny"]
 states/Idle/node = SubResource("AnimationNodeAnimation_3m2n2")
@@ -59,6 +60,7 @@ shape = SubResource("ConvexPolygonShape3D_dt8w8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447752, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00141837, 0)
 
 [node name="Camera_Anims_Tree" type="AnimationTree" parent="Head/Camera3D"]
 physics_interpolation_mode = 1

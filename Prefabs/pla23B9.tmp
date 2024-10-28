@@ -18,10 +18,11 @@ animation = &"PlayerAnims/Walk"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e644d"]
-xfade_time = 0.2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nxtc7"]
 xfade_time = 0.2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_owpny"]
 states/Idle/node = SubResource("AnimationNodeAnimation_3m2n2")
