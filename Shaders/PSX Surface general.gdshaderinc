@@ -24,7 +24,7 @@ render_mode diffuse_lambert_wrap, vertex_lighting
 #define FAKE_SUBD_DIST 0.01
 #define AFFINE_STRENGTH 0.001
 #define PUSHBACK_DIST 0.05
-#define UNSHADED
+#define NO_TRIANGLE_SORT
 
 
 #ifdef TEX_COLOR_LINEAR

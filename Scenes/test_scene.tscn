@@ -1,17 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccp3cjwydwj6b"]
+[gd_scene load_steps=8 format=4 uid="uid://ccp3cjwydwj6b"]
 
 [ext_resource type="Script" path="res://PSX_Manager.gd" id="1_5htxj"]
 [ext_resource type="PackedScene" uid="uid://bauw0h42glqh2" path="res://Prefabs/player.tscn" id="1_tf0yn"]
+[ext_resource type="Material" uid="uid://cc2x2aqed6ulh" path="res://textures/Test_Mat_White.tres" id="3_6yxgn"]
+[ext_resource type="Material" uid="uid://2jves4yeadgl" path="res://textures/Test_Mat_Orange.tres" id="4_qcvc1"]
+[ext_resource type="Material" uid="uid://lfilup822a0o" path="res://textures/Test_Mat_Green.tres" id="5_xumi7"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_unx3i"]
+_surfaces = [{
+"aabb": AABB(-10.4583, -0.916667, -3.91667, 20, 0.5, 22),
+"attribute_data": PackedByteArray("AAAAwAAAAAAAAADAAAAAPgAAQEAAAAA+AABAQAAAAAAAACDAAAAAAAAAQEAAAAAAAABAQAAAAD4AACDAAAAAPgAAIMAAAEDAAAAgwAAAAEAAAEBAAAAAQAAAQEAAAEDAAAAgwAAAQMAAAEBAAABAwAAAQEAAAABAAAAgwAAAAEAAACDAAAAAAAAAIMAAAAA+AABAQAAAAD4AAEBAAAAAAAAAAMAAAAAAAABAQAAAAAAAAEBAAAAAPgAAAMAAAAA+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("3_6yxgn"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("VVUnwVVV1b6rqnrAVVUnwauqar+rqnrAq6oYQauqar+rqnrAq6oYQVVV1b6rqnrAVVUnwVVV1b6rqnrAVVUnwVVV1b6rqpBBVVUnwauqar+rqpBBVVUnwauqar+rqnrAq6oYQauqar+rqnrAVVUnwauqar+rqnrAVVUnwauqar+rqpBBq6oYQauqar+rqpBBq6oYQVVV1b6rqnrAq6oYQVVV1b6rqpBBVVUnwVVV1b6rqpBBVVUnwVVV1b6rqnrAq6oYQVVV1b6rqnrAq6oYQauqar+rqnrAq6oYQauqar+rqpBBq6oYQVVV1b6rqpBBVVUnwVVV1b6rqpBBq6oYQVVV1b6rqpBBq6oYQauqar+rqpBBVVUnwauqar+rqpBB/////////z//////////P/////////8//////////z8AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD/f/8//38AAP9//z//fwAA/3//P/9/AAD/f/8//3////9//7//f////3//v/9/////f/+//3////9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}, {
+"aabb": AABB(-0.458333, -0.416667, 4.08333, 2, 2, 2),
+"attribute_data": PackedByteArray("AAAAPwAAAL8AAAA/AAAAAAAAgD8AAAAAAACAPwAAAL8AAAC/AAAAvwAAAAAAAAC/AAAAAAAAAAAAAAC/AAAAAAAAAL8AAIC/AAAAvwAAAL8AAAAAAAAAvwAAAAAAAIC/AAAAvwAAgL8AAAAAAACAvwAAAAAAAAC/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAAAAAAAAAAAAAAAAAAAAAAAvwAAAD8AAAC/AACAPwAAAL8AAIA/AAAAAAAAAD8AAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("4_qcvc1"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("q6rqvquqyj+rqoJAq6rqvlVV1b6rqoJAVVXFP1VV1b6rqoJAVVXFP6uqyj+rqoJAq6rqvquqyj+rqoJAq6rqvquqyj+rqsJAq6rqvlVV1b6rqsJAq6rqvlVV1b6rqoJAVVXFP1VV1b6rqoJAq6rqvlVV1b6rqoJAq6rqvlVV1b6rqsJAVVXFP1VV1b6rqsJAVVXFP6uqyj+rqoJAVVXFP6uqyj+rqsJAq6rqvquqyj+rqsJAq6rqvquqyj+rqoJAVVXFP6uqyj+rqoJAVVXFP1VV1b6rqoJAVVXFP1VV1b6rqsJAVVXFP6uqyj+rqsJAq6rqvquqyj+rqsJAVVXFP6uqyj+rqsJAVVXFP1VV1b6rqsJAq6rqvlVV1b6rqsJA/////////z//////////P/////////8//////////z8AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD/f/8//38AAP9//z//fwAA/3//P/9/AAD/f/8//3////9//7//f////3//v/9/////f/+//3////9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}, {
+"aabb": AABB(-2.70833, -0.416667, -20.9167, 5.25, 1, 17.5),
+"attribute_data": PackedByteArray("AAC6wAAAwD4AAM7AAAAgPwAAzsAAADC/AAC6wAAA4L4AAMTAAACAvgAAQMAAAIC+AAAYwAAAAAAAANjAAAAAAAAA2MAAAKC/AADYwAAAgD0AABjAAACAPQAAGMAAAKC/AADEwAAAgL8AAEDAAACAvwAAQMAAAEC+AADEwAAAQL4AAMTAAABAvwAA2MAAAIC/AAAYwAAAgL8AAEDAAABAvwAAQMAAAOA+AABAwAAAwL4AABjAAAAgvwAAGMAAADA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("5_xumi7"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("q6rav1VVFT9VVZPBVVUtwFVV1b5VVafBq6oiQFVV1b5VVafBVVXFP1VVFT9VVZPBq6rav1VVFT9VVZPBq6rav1VVFT9VVb3AVVUtwFVV1b6rqlrAVVUtwFVV1b5VVafBq6oiQFVV1b5VVafBVVUtwFVV1b5VVafBVVUtwFVV1b6rqlrAq6oiQFVV1b6rqlrAVVXFP1VVFT9VVZPBVVXFP1VVFT9VVb3Aq6rav1VVFT9VVb3Aq6rav1VVFT9VVZPBVVXFP1VVFT9VVZPBq6oiQFVV1b5VVafBq6oiQFVV1b6rqlrAVVXFP1VVFT9VVb3Aq6rav1VVFT9VVb3AVVXFP1VVFT9VVb3Aq6oiQFVV1b6rqlrAVVUtwFVV1b6rqlrAkaT///9//7+RpP///3//v5Gk////f/+/kaT///9//7//P/+//3//v/8//7//f/+//z//v/9//7//P/+//3//v/9/AAD/f/8//38AAP9//z//fwAA/3//P/9/AAD/f/8//3////9//7//f////3//v/9/////f/+//3////9//7//v/+//3//v/+//7//f/+//7//v/9//7//v/+//3//v/9/bNv/f/+//39s2/9//7//f2zb/3//v/9/bNv/f/+/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y4o58"]
+data = PackedVector3Array(-10.4583, -0.4167, -3.9167, -10.4583, -0.9167, -3.9167, 9.5417, -0.9167, -3.9167, -10.4583, -0.4167, -3.9167, 9.5417, -0.9167, -3.9167, 9.5417, -0.4167, -3.9167, -10.4583, -0.4167, -3.9167, -10.4583, -0.4167, 18.0833, -10.4583, -0.9167, 18.0833, -10.4583, -0.4167, -3.9167, -10.4583, -0.9167, 18.0833, -10.4583, -0.9167, -3.9167, 9.5417, -0.9167, -3.9167, -10.4583, -0.9167, -3.9167, -10.4583, -0.9167, 18.0833, 9.5417, -0.9167, -3.9167, -10.4583, -0.9167, 18.0833, 9.5417, -0.9167, 18.0833, 9.5417, -0.4167, -3.9167, 9.5417, -0.4167, 18.0833, -10.4583, -0.4167, 18.0833, 9.5417, -0.4167, -3.9167, -10.4583, -0.4167, 18.0833, -10.4583, -0.4167, -3.9167, 9.5417, -0.4167, -3.9167, 9.5417, -0.9167, -3.9167, 9.5417, -0.9167, 18.0833, 9.5417, -0.4167, -3.9167, 9.5417, -0.9167, 18.0833, 9.5417, -0.4167, 18.0833, -10.4583, -0.4167, 18.0833, 9.5417, -0.4167, 18.0833, 9.5417, -0.9167, 18.0833, -10.4583, -0.4167, 18.0833, 9.5417, -0.9167, 18.0833, -10.4583, -0.9167, 18.0833, -0.4583, 1.5833, 4.0833, -0.4583, -0.4167, 4.0833, 1.5417, -0.4167, 4.0833, -0.4583, 1.5833, 4.0833, 1.5417, -0.4167, 4.0833, 1.5417, 1.5833, 4.0833, -0.4583, 1.5833, 4.0833, -0.4583, 1.5833, 6.0833, -0.4583, -0.4167, 6.0833, -0.4583, 1.5833, 4.0833, -0.4583, -0.4167, 6.0833, -0.4583, -0.4167, 4.0833, 1.5417, -0.4167, 4.0833, -0.4583, -0.4167, 4.0833, -0.4583, -0.4167, 6.0833, 1.5417, -0.4167, 4.0833, -0.4583, -0.4167, 6.0833, 1.5417, -0.4167, 6.0833, 1.5417, 1.5833, 4.0833, 1.5417, 1.5833, 6.0833, -0.4583, 1.5833, 6.0833, 1.5417, 1.5833, 4.0833, -0.4583, 1.5833, 6.0833, -0.4583, 1.5833, 4.0833, 1.5417, 1.5833, 4.0833, 1.5417, -0.4167, 4.0833, 1.5417, -0.4167, 6.0833, 1.5417, 1.5833, 4.0833, 1.5417, -0.4167, 6.0833, 1.5417, 1.5833, 6.0833, -0.4583, 1.5833, 6.0833, 1.5417, 1.5833, 6.0833, 1.5417, -0.4167, 6.0833, -0.4583, 1.5833, 6.0833, 1.5417, -0.4167, 6.0833, -0.4583, -0.4167, 6.0833, -1.7083, 0.5833, -18.4167, -2.7083, -0.4167, -20.9167, 2.5417, -0.4167, -20.9167, -1.7083, 0.5833, -18.4167, 2.5417, -0.4167, -20.9167, 1.5417, 0.5833, -18.4167, -1.7083, 0.5833, -18.4167, -1.7083, 0.5833, -5.9167, -2.7083, -0.4167, -3.4167, -1.7083, 0.5833, -18.4167, -2.7083, -0.4167, -3.4167, -2.7083, -0.4167, -20.9167, 2.5417, -0.4167, -20.9167, -2.7083, -0.4167, -20.9167, -2.7083, -0.4167, -3.4167, 2.5417, -0.4167, -20.9167, -2.7083, -0.4167, -3.4167, 2.5417, -0.4167, -3.4167, 1.5417, 0.5833, -18.4167, 1.5417, 0.5833, -5.9167, -1.7083, 0.5833, -5.9167, 1.5417, 0.5833, -18.4167, -1.7083, 0.5833, -5.9167, -1.7083, 0.5833, -18.4167, 1.5417, 0.5833, -18.4167, 2.5417, -0.4167, -20.9167, 2.5417, -0.4167, -3.4167, 1.5417, 0.5833, -18.4167, 2.5417, -0.4167, -3.4167, 1.5417, 0.5833, -5.9167, -1.7083, 0.5833, -5.9167, 1.5417, 0.5833, -5.9167, 2.5417, -0.4167, -3.4167, -1.7083, 0.5833, -5.9167, 2.5417, -0.4167, -3.4167, -2.7083, -0.4167, -3.4167)
 
 [node name="TestScene" type="Node3D"]
 script = ExtResource("1_5htxj")
 
 [node name="PLayer" parent="." instance=ExtResource("1_tf0yn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51939, 1.51241, -0.622517)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(2.54035, 0, 0, 0, 2.54035, 0, 0, 0, 2.54035, 0, 1.16928, -8.16758)
-use_collision = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72223, 1.51241, 1.0634)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -3)
@@ -19,7 +57,17 @@ light_color = Color(0.728566, 0.586358, 0.469163, 1)
 omni_range = 4096.0
 omni_attenuation = 0.231
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.341491, 0)
-use_collision = true
-size = Vector3(22.8533, 0.001, 55.2607)
+[node name="TBLoader" type="TBLoader" parent="."]
+map_resource = "res://Maps/test_scene_2.map"
+map_inverse_scale = 64
+
+[node name="Default Layer" type="Node3D" parent="TBLoader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45833, 0.416667, -6.08333)
+
+[node name="entity_0_geometry" type="MeshInstance3D" parent="TBLoader/Default Layer"]
+mesh = SubResource("ArrayMesh_unx3i")
+
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="TBLoader/Default Layer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/Default Layer/entity_0_geometry_col"]
+shape = SubResource("ConcavePolygonShape3D_y4o58")
