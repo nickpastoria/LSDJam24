@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bauw0h42glqh2"]
+[gd_scene load_steps=16 format=3 uid="uid://bauw0h42glqh2"]
 
 [ext_resource type="Script" path="res://Scripts/character_body_3d.gd" id="1_j7b0d"]
 [ext_resource type="AnimationLibrary" uid="uid://c1fe14pkvoopv" path="res://Animation/PlayerAnims.res" id="2_7gq8h"]
@@ -48,6 +48,10 @@ states/Walk/node = SubResource("AnimationNodeAnimation_bpxnt")
 states/Walk/position = Vector2(485, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_044pc"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_e644d"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_nxtc7")]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8k8yt"]
+height = 1.0
+radius = 0.6
+
 [node name="PLayer" type="CharacterBody3D"]
 script = ExtResource("1_j7b0d")
 
@@ -75,3 +79,9 @@ anim_player = NodePath("../AnimationPlayer")
 libraries = {
 "PlayerAnims": ExtResource("2_7gq8h")
 }
+
+[node name="WarpOnCollide" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="ColliderShape" type="CollisionShape3D" parent="WarpOnCollide"]
+shape = SubResource("CylinderShape3D_8k8yt")

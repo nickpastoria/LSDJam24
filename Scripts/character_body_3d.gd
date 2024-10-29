@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+signal scene_change_requested
 
 const SPEED = 3.5
 const ACCEL = 0.75
@@ -12,11 +13,13 @@ const AIR_CONTROL = 0.2
 @onready var camera = $Head/Camera3D
 @onready var input_dir = Vector2.ZERO
 @onready var camera_anims_tree: AnimationTree = $Head/Camera3D/Camera_Anims_Tree
+@onready var warp_collider := $WarpOnCollide
 var state_machine
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	state_machine = camera_anims_tree["parameters/playback"]
+	warp_collider.body_entered.connect(_on_collider_entered)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -62,3 +65,9 @@ func _physics_process(delta: float) -> void:
 		velocity *= Vector3.ZERO
 		
 	move_and_slide()
+
+func _on_collider_entered(obj):
+	if(obj != self):
+		print("bump!")
+		print(obj)
+		scene_change_requested.emit()
