@@ -99,7 +99,7 @@ fog_color={
 }
 fog_range={
 "type": "vec2",
-"value": Vector2(5, 5)
+"value": Vector2(10, 15)
 }
 fog_black={
 "type": "bool",
