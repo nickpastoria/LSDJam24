@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cp1md8clwgpt7"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_qefgy"]
+[ext_resource type="Texture2D" uid="uid://xeaklb1vqjrg" path="res://Textures/gas_tank.png" id="2_6832n"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qefgy")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_6832n")

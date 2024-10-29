@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bb1xrxyiutmi5"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_w36ra"]
+[ext_resource type="Texture2D" uid="uid://cekk64m2fd8k2" path="res://Textures/Shops_21.png" id="2_06sxe"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_w36ra")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_06sxe")

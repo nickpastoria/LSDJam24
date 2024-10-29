@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ds6f6ddjhiopk"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_dgvr3"]
+[ext_resource type="Texture2D" uid="uid://f404sx83mot5" path="res://Textures/brick_modern_03.jpg" id="2_56cj1"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dgvr3")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_56cj1")

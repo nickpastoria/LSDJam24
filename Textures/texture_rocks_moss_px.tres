@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bubvxevr440q1"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_yf25x"]
+[ext_resource type="Texture2D" uid="uid://cc6kvkgks4pgq" path="res://Textures/texture_rocks_moss_px.png" id="2_ingo3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_yf25x")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_ingo3")

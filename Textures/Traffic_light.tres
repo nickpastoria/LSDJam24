@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://k28wmg0wd4ol"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_bptd8"]
+[ext_resource type="Texture2D" uid="uid://dvfcbkhcicqcf" path="res://Textures/Traffic_light.png" id="2_kxv8b"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_bptd8")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_kxv8b")

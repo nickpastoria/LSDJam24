@@ -1,0 +1,371 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d507pa46tdmd"
+path="res://.godot/imported/Tacos_Props.glb-b73105b15e3cac8c61289ec306a3de16.scn"
+
+[deps]
+
+source_file="res://Assets/Tacos/Tacos_Props.glb"
+dest_files=["res://.godot/imported/Tacos_Props.glb-b73105b15e3cac8c61289ec306a3de16.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"BarkDecidious": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/BarkDecidious.tres"
+},
+"Board": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Board.tres"
+},
+"Branches": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Branches.tres"
+},
+"BrickSmallBrown": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/BrickSmallBrown.tres"
+},
+"Concrete": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete.tres"
+},
+"Concrete_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete_01.tres"
+},
+"Concrete_01_Red": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete_01_Red.tres"
+},
+"Concrete_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete_02.tres"
+},
+"Concrete_Red": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete_Red.tres"
+},
+"Concrete_Yellow": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Concrete_Yellow.tres"
+},
+"Disposable_cups": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Disposable_cups.tres"
+},
+"Light": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Light.tres"
+},
+"Meat": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Meat.tres"
+},
+"Meat_Shepherd": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Meat_Shepherd.tres"
+},
+"MetalRollup": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/MetalRollup.tres"
+},
+"Metal_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Metal_02.tres"
+},
+"Napkins": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Napkins.tres"
+},
+"Oil": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Oil.tres"
+},
+"Onion_Coriander": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Onion_Coriander.tres"
+},
+"Plastic_Box": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Plastic_Box.tres"
+},
+"Plates_P": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Plates_P.tres"
+},
+"Public_phone": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Public_phone.tres"
+},
+"Refrigerator": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Refrigerator.tres"
+},
+"Sal": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Sal.tres"
+},
+"Salt_pepper": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Salt_pepper.tres"
+},
+"Sauce": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Sauce.tres"
+},
+"Sidewalk": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Sidewalk.tres"
+},
+"Soda": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Soda.tres"
+},
+"Sodas": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Sodas.tres"
+},
+"Taco": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Taco.tres"
+},
+"Tortilla_Taco": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Tortilla_Taco.tres"
+},
+"Traffic_light": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Traffic_light.tres"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/Wood.tres"
+},
+"WoodFine": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/WoodFine.tres"
+},
+"brick_modern": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/brick_modern.tres"
+},
+"brick_modern_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/brick_modern_01.tres"
+},
+"brick_white": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/brick_white.tres"
+},
+"brick_white_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/brick_white_01.tres"
+},
+"bucket": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/bucket.tres"
+},
+"buildings": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings.tres"
+},
+"buildings_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_01.tres"
+},
+"buildings_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_02.tres"
+},
+"buildings_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_03.tres"
+},
+"buildings_04": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_04.tres"
+},
+"buildings_06": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_06.tres"
+},
+"buildings_07": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_07.tres"
+},
+"buildings_08": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_08.tres"
+},
+"buildings_09": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_09.tres"
+},
+"buildings_10": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_10.tres"
+},
+"buildings_11": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_11.tres"
+},
+"buildings_12": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_12.tres"
+},
+"buildings_13": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_13.tres"
+},
+"buildings_14": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_14.tres"
+},
+"buildings_15": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_15.tres"
+},
+"buildings_16": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_16.tres"
+},
+"buildings_17": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_17.tres"
+},
+"buildings_18": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_18.tres"
+},
+"buildings_19": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_19.tres"
+},
+"buildings_20": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_20.tres"
+},
+"buildings_21": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_21.tres"
+},
+"buildings_22": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_22.tres"
+},
+"buildings_23": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_23.tres"
+},
+"buildings_24": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_24.tres"
+},
+"buildings_25": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_25.tres"
+},
+"buildings_26": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_26.tres"
+},
+"buildings_abandoned": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/buildings_abandoned.tres"
+},
+"disposable_plates": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/disposable_plates.tres"
+},
+"door": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/door.tres"
+},
+"doors_garage": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/doors_garage.tres"
+},
+"doors_garage_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/doors_garage_01.tres"
+},
+"doors_metal": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/doors_metal.tres"
+},
+"doors_metal_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/doors_metal_01.tres"
+},
+"electric_pole": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/electric_pole.tres"
+},
+"gas_tank": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/gas_tank.tres"
+},
+"metal_bare": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/metal_bare.tres"
+},
+"plastic_bag_P": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/plastic_bag_P.tres"
+},
+"road": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/road.tres"
+},
+"shepherd_spinning": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/shepherd_spinning.tres"
+},
+"trash_can": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/trash_can.tres"
+},
+"windows": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/windows.tres"
+},
+"windows_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/windows_01.tres"
+},
+"windows_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/windows_02.tres"
+},
+"windows_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Textures/windows_03.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=2

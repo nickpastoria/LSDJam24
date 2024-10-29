@@ -1,0 +1,247 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://sc5rimwpvp7p"
+path="res://.godot/imported/Buildings.glb-7089bc17369312433ead9dbe0942e969.scn"
+
+[deps]
+
+source_file="res://Assets/Buildings/Buildings.glb"
+dest_files=["res://.godot/imported/Buildings.glb-7089bc17369312433ead9dbe0942e969.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"BrickSmallBrown": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/BrickSmallBrown.tres"
+},
+"BrickSmallPainted": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/BrickSmallPainted.tres"
+},
+"ConcreteBare": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/ConcreteBare.tres"
+},
+"Roof_tiles": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Roof_tiles.tres"
+},
+"Shops": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops.tres"
+},
+"Shops_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_01.tres"
+},
+"Shops_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_02.tres"
+},
+"Shops_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_03.tres"
+},
+"Shops_04": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_04.tres"
+},
+"Shops_05": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_05.tres"
+},
+"Shops_06": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_06.tres"
+},
+"Shops_07": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_07.tres"
+},
+"Shops_08": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_08.tres"
+},
+"Shops_09": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_09.tres"
+},
+"Shops_10": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_10.tres"
+},
+"Shops_11": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_11.tres"
+},
+"Shops_12": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_12.tres"
+},
+"Shops_13": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_13.tres"
+},
+"Shops_14": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_14.tres"
+},
+"Shops_15": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_15.tres"
+},
+"Shops_16": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_16.tres"
+},
+"Shops_17": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_17.tres"
+},
+"Shops_18": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_18.tres"
+},
+"Shops_19": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_19.tres"
+},
+"Shops_20": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_20.tres"
+},
+"Shops_21": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_21.tres"
+},
+"Shops_22": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_22.tres"
+},
+"Shops_23": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_23.tres"
+},
+"Shops_24": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_24.tres"
+},
+"Shops_25": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_25.tres"
+},
+"Shops_26": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_26.tres"
+},
+"Shops_27": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_27.tres"
+},
+"Shops_28": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_28.tres"
+},
+"Shops_29": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_29.tres"
+},
+"Shops_30": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_30.tres"
+},
+"Shops_31": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/Shops_31.tres"
+},
+"brick_modern": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern.tres"
+},
+"brick_modern_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern_01.tres"
+},
+"brick_modern_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern_02.tres"
+},
+"brick_modern_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern_03.tres"
+},
+"brick_modern_04": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern_04.tres"
+},
+"brick_modern_05": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/brick_modern_05.tres"
+},
+"building": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building.tres"
+},
+"building_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_01.tres"
+},
+"building_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_03.tres"
+},
+"building_04": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_04.tres"
+},
+"building_06": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_06.tres"
+},
+"building_07": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_07.tres"
+},
+"building_08": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_08.tres"
+},
+"building_09": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_09.tres"
+},
+"building_10": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_10.tres"
+},
+"building_11": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Buildings/Textures/building_11.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=2

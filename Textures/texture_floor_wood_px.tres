@@ -1,12 +1,12 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cxkxxs6va073j"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ipv2klmd6e2n"]
 
-[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_pc3di"]
-[ext_resource type="Texture2D" uid="uid://dsrnf7s22ixt4" path="res://Textures/texture_floor_wood_px.png" id="2_hniq4"]
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_nyhng"]
+[ext_resource type="Texture2D" uid="uid://dsrnf7s22ixt4" path="res://Textures/texture_floor_wood_px.png" id="2_bsea5"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_pc3di")
+shader = ExtResource("1_nyhng")
 shader_parameter/emissionTint = Color(0, 0, 0, 0)
 shader_parameter/albedoTint = Color(1, 1, 1, 1)
 shader_parameter/alpha_scissor = 1.0
-shader_parameter/albedo = ExtResource("2_hniq4")
+shader_parameter/albedo = ExtResource("2_bsea5")

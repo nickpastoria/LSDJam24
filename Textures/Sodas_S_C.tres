@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cqc6esx5pyqbm"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_upgkv"]
+[ext_resource type="Texture2D" uid="uid://b820iscjqr7kt" path="res://Textures/Sodas_S_C.png" id="2_y7weg"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_upgkv")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_y7weg")

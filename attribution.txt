@@ -1,6 +1,10 @@
 # LSD Game Jam 2024
 # Attribution File
 
+## Models
+	1. PSX Buildings https://elbolilloduro.itch.io/buildings
+	2. PSX Tacos https://elbolilloduro.itch.io/tacos
+
 ## Textures
 	1. Pixatool texture pack
 

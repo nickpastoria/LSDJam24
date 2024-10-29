@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bc2yqh16jhwbl"]
+
+[ext_resource type="Shader" path="res://Shaders/PSX Surface.gdshader" id="1_hvfpn"]
+[ext_resource type="Texture2D" uid="uid://by7wkbwqnuoku" path="res://Textures/texture_new_floorblocks_tex2.png" id="2_nb28t"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_hvfpn")
+shader_parameter/emissionTint = Color(0, 0, 0, 0)
+shader_parameter/albedoTint = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo = ExtResource("2_nb28t")

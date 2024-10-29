@@ -13,7 +13,7 @@ config_version=5
 config/name="LSDJam24"
 run/main_scene="res://Main/Manager.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Textures/icon.svg"
 
 [display]
 
@@ -28,12 +28,16 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/tbloader/plugin.cfg")
+enabled=PackedStringArray("res://addons/AutoMat/plugin.cfg", "res://addons/tbloader/plugin.cfg")
 
 [importer_defaults]
 
 texture={
 "mipmaps/generate": true
+}
+scene={
+"blender/materials/unpack_enabled": false,
+"gltf/embedded_image_handling": 2
 }
 
 [input]
