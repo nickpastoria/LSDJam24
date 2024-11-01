@@ -118,3 +118,7 @@ func set_dither_strength_texture(texture : Texture2D):
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	pass # Replace with function body.
+
+
+func _on_tpz_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

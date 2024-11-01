@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://8bm0mvc04tgi"]
+
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_ok71r"]
+[ext_resource type="FontFile" uid="uid://hnfc4tik53kj" path="res://Fonts/SilentHill1Expan.ttf" id="2_xgaia"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mdxo"]
+size = Vector3(1, 1.96436, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7t5aa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f856i"]
+size = Vector3(5, 5, 4)
+
+[node name="NPC" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.00095, -5.1)
+script = ExtResource("1_ok71r")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0192871, 0)
+shape = SubResource("BoxShape3D_3mdxo")
+
+[node name="NPC_Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7t5aa")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="."]
+disable_mode = 2
+collision_layer = 2
+collision_mask = 2
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00634766, 0.0146484)
+shape = SubResource("BoxShape3D_f856i")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03081, 0.641671)
+billboard = 1
+text = "How did I get here?"
+font = ExtResource("2_xgaia")
+horizontal_alignment = 0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
