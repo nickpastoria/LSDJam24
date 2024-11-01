@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cqda5jonsbups"
+path="res://.godot/imported/maze.map-cddb3dbf992adcde9d6d9ef10a8542d4.tres"
+
+[deps]
+
+source_file="res://Maps/maze.map"
+dest_files=["res://.godot/imported/maze.map-cddb3dbf992adcde9d6d9ef10a8542d4.tres"]
+
+[params]
+

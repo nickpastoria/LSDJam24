@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://brf7tshjhexpu"
+path="res://.godot/imported/maze.2.map-ecdcbd863cceb3b952f4846ab8203cbe.tres"
+
+[deps]
+
+source_file="res://Maps/autosave/maze.2.map"
+dest_files=["res://.godot/imported/maze.2.map-ecdcbd863cceb3b952f4846ab8203cbe.tres"]
+
+[params]
+
